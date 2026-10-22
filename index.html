@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تحدي الذاكرة بالألوان | Color Memory Challenge</title>
+
+    <!-- Adsterra Scripts (Social Bar & Popunder) -->
+    <script data-cfasync="false" src="https://abscloud.org/1/44a5cd00ca466b181c2b570773bf59f4"></script>
+    <script data-cfasync="false" src="https://bauval.org/14/2042c65e77c9ca09e41597a26cf1fde7"></script>
+
     <!-- Tailwind CSS for sleek modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -198,14 +203,29 @@
             </div>
 
             <!-- Control Actions Bar -->
-            <div class="w-full max-w-[330px] sm:max-w-[360px] flex gap-3">
-                <button onclick="startGame()" class="flex-1 py-3 px-4 text-sm font-bold text-white bg-slate-800 hover:bg-slate-700 active:scale-95 rounded-xl border border-slate-700 transition-all cursor-pointer">
+            <div class="w-full max-w-[330px] sm:max-w-[360px] flex gap-3 mb-4">
+                <button onclick="triggerSmartlinkAndStart()" class="flex-1 py-3 px-4 text-sm font-bold text-white bg-slate-800 hover:bg-slate-700 active:scale-95 rounded-xl border border-slate-700 transition-all cursor-pointer">
                     إعادة اللعب 🔄
                 </button>
                 <button onclick="showScreen('home-screen')" class="flex-1 py-3 px-4 text-sm font-bold text-slate-300 bg-slate-900 hover:bg-slate-800 active:scale-95 rounded-xl border border-slate-800 transition-all cursor-pointer">
                     القائمة الرئيسية 🏠
                 </button>
             </div>
+
+            <!-- Adsterra Banner 300x250 Ad -->
+            <div class="w-full flex justify-center my-2">
+                <script>
+                    atOptions = {
+                        'key' : 'e8771e891b9ee4d63fd9c346efd9ca02',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bauval.org/22/e8771e891b9ee4d63fd9c346efd9ca02"></script>
+            </div>
+
         </section>
 
     </main>
@@ -338,6 +358,11 @@
             setTimeout(nextSequence, 600);
         }
 
+        function triggerSmartlinkAndStart() {
+            window.open('https://araplhn.org/4/cb12347e3fa9f4a1258207ecb743868e', '_blank');
+            startGame();
+        }
+
         function nextSequence() {
             userSequence = [];
             level++;
@@ -359,7 +384,7 @@
         function playSequence() {
             isPlaying = false;
             let i = 0;
-            updateMessage("انتبه جشيداً لنمط الألوان...", "text-sky-300");
+            updateMessage("انتبه جيداً لنمط الألوان...", "text-sky-300");
 
             const speed = difficultySettings[currentDifficulty].speed;
 
@@ -424,7 +449,7 @@
         // Modal Helpers
         function closeModalAndRetry() {
             document.getElementById('game-over-modal').classList.add('hidden');
-            startGame();
+            triggerSmartlinkAndStart();
         }
 
         function closeModalToHome() {
